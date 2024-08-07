@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeito de Ser - Centro de Desenvolvimento Infantojuvenil</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Reklame+Script&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #87CEFA; /* Azul claro */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(to bottom, #87CEFA, #4682B4);
+        }
+        header img {
+            width: 150px;
+            height: auto;
+        }
+        nav {
+            background-color: #87CEFA;
+            overflow: hidden;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #4682B4;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-family: 'Reklame Script', cursive;
+            color: #4682B4;
+            text-align: center;
+            font-weight: 600;
+        }
+        .img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .img-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .img-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        footer {
+            background-color: #87CEFA;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(to top, #87CEFA, #4682B4);
+            position: relative;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .contact-links a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            background-color: #4682B4;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-links a:hover {
+            background-color: #1E90FF;
+        }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            text-align: center;
+        }
+        .service-grid div {
+            flex: 1 1 calc(33% - 40px);
+            box-sizing: border-box;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function openImage(src) {
+            const imgWindow = window.open("");
+            imgWindow.document.write('<img src="' + src + '" style="width:100%;">');
+        }
+        function openLocation() {
+            window.open("https://maps.app.goo.gl/1NbX7u1WUFFJYbXm6");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Jeito de Ser Logo">
+        <h1>Jeito de Ser - Centro de Desenvolvimento Infantojuvenil</h1>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre a Clínica</a>
+        <a href="#profissionais">Profissionais</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#arborescer">Projeto Arborescer</a>
+        <a href="#ambientes">Ambientes</a>
+        <a href="#contatos">Contatos</a>
+    </nav>
+    <div class="content">
+        <div id="sobre" class="section">
+            <h2>Sobre a Clínica</h2>
+            <div class="img-container">
+                <img src="fachada.jpg" alt="Fachada da Clínica" onclick="openLocation()">
+            </div>
+            <p>
+                O Jeito de Ser - Centro de Desenvolvimento Infantojuvenil é um centro com trabalho multidisciplinar focado no desenvolvimento de crianças e adolescentes. Nossa equipe é composta por profissionais qualificados que visam proporcionar um atendimento integral e personalizado para cada paciente.
+            </p>
+        </div>
+        <div id="profissionais" class="section">
+            <h2>Profissionais</h2>
+            <ul>
+                <li>Fonoaudióloga</li>
+                <li>Nutricionista especialista em TEA</li>
+                <li>Psicóloga</li>
+                <li>Psicomotricista</li>
+                <li>Psicopedagoga</li>
+                <li>Terapeuta Ocupacional</li>
+            </ul>
+        </div>
+        <div id="servicos" class="section">
+            <h2>Serviços</h2>
+            <div class="service-grid">
+                <div>
+                    <h3>Turninho (Contraturno Escolar)</h3>
+                    <img src="turno.jpg" alt="Turninho" onclick="openImage('turno.jpg')">
+                </div>
+                <div>
+                    <h3>Capoeira</h3>
+                    <img src="capoeira.jpg" alt="Capoeira" onclick="openImage('capoeira.jpg')">
+                </div>
+                <div>
+                    <h3>Colônia de Férias</h3>
+                    <img src="colonia.jpg" alt="Colônia de Férias" onclick="openImage('colonia.jpg')">
+                </div>
+                <div>
+                    <h3>Atendimento Multidisciplinar</h3>
+                </div>
+                <div>
+                    <h3>Atendimentos para Primeira Infância</h3>
+                </div>
+                <div>
+                    <h3>Funcional Kids</h3>
+                </div>
+            </div>
+        </div>
+        <div id="arborescer" class="section">
+            <h2>Projeto Arborescer</h2>
+            <div class="img-container">
+                <img src="arborescer.jpg" alt="Projeto Arborescer" onclick="openImage('arborescer.jpg')">
+            </div>
+            <p>
+                O Projeto Arborescer promove um dia inteiro de diversão, lazer, conhecimento e socialização de crianças e adolescentes em um sítio no bairro Aeroporto. É um dia longe das telas e perto da natureza, com muita atividade física, arte, mão na massa, histórias e até banho de piscina.
+            </p>
+        </div>
+        <div id="ambientes" class="section">
+            <h2>Ambientes</h2>
+            <div class="img-grid">
+                <div>
+                    <img src="fazendinha.jpg" alt="Fazendinha" onclick="openImage('fazendinha.jpg')">
+                    <p>Fazendinha</p>
+                </div>
+                <div>
+                    <img src="prainha.jpg" alt="Prainha" onclick="openImage('prainha.jpg')">
+                    <p>Prainha</p>
+                </div>
+                <div>
+                    <img src="mercadinho.jpg" alt="Mercadinho" onclick="openImage('mercadinho.jpg')">
+                    <p>Mercadinho</p>
+                </div>
+                <div>
+                    <img src="sala.jpg" alt="Salas de Atendimento" onclick="openImage('sala.jpg')">
+                    <p>Salas de Atendimento</p>
+                </div>
+                <div>
+                    <img src="parque.jpg" alt="Parquinho" onclick="openImage('parque.jpg')">
+                    <p>Parquinho</p>
+                </div>
+                <div>
+                    <img src="areadeconvivencia.jpg" alt="Área de Convivência" onclick="openImage('areadeconvivencia.jpg')">
+                    <p>Área de Convivência</p>
+                </div>
+            </div>
+        </div>
+        <div id="contatos" class="section">
+            <h2>Contatos</h2>
+            <div class="contact-links">
+                <a href="mailto:jeitodeserfsa@gmail.com">Email</a>
+                <a href="https://wa.me/5575981725151">Whatsapp</a>
+                <a href="https://www.instagram.com/jeitodeserfsa">Instagram</a>
+                <a href="https://maps.app.goo.gl/1NbX7u1WUFFJYbXm6">Localização</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Jeito de Ser - Centro de Desenvolvimento Infantojuvenil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
